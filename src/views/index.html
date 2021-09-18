@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/index.css">
+    <title>YouTube</title>
+</head>
+<body>
+
+    <%- include('header.html', { links: ['add-video', 'about', 'home'] }) %>
+    <div id="wrapper">
+
+    </div>
+
+<script>
+    
+    ;(async () => {
+        let response = await fetch('/video')
+        let data = await response.json()
+        for(let video of data){
+            let div = document.createElement('div')
+            let p = document.createElement('p')
+            let user = document.createElement('p')
+            let span = document.createElement('span')
+            let videos = document.createElement('video')
+            let source = document.createElement('source')
+            source.src = '/' + video.videoPath
+            source.type = 'video/mp4'
+            videos.controls = true
+            user.setAttribute('class', 'username')
+            div.setAttribute('class', 'box')
+            p.textContent = video.videoName
+            user.textContent = 'username:  ' + video.user.username
+            span.textContent = 'date:  ' + video.date
+            videos.append(source)
+            div.append(videos)
+            div.append(p)
+            div.append(user)
+            div.append(span)
+            wrapper.append(div)
+        }
+    })()
+
+
+</script>
+</body>
+</html>

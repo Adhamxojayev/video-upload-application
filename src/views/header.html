@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/header.css">
+<header>
+    <img src="/youtube-icon.png" alt="logo" width="50px" height="50px" class="js-btn">
+    <ul>
+        <% for(let link of links) { %>
+            <li>
+                <a href="/<%= link %>"><%= link%></a>
+            </li>
+        <% } %>
+
+    </ul>
+</header>

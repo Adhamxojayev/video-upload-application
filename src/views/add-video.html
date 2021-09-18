@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/add-video.css">
+    <title>add-video</title>
+</head>
+<body>
+    <%- include('header.html', { links: ['about', 'home'] }) %>
+
+    <form id="form">
+        <div class="files">
+            <label>
+                <input class="inpfile" type="file" id="file" required>
+                <span class="inpfile-span">
+                    <img src="/upload.svg" alt="icon upload" width="20" height="20">
+                    <span>
+                        choose file location
+                    </span>
+                </span>
+            </label>
+        </div>
+        <input class="" type="text" placeholder="Enter the name of the video" required id="names">
+        <button type="submit">send</button>
+    </form>
+
+</body>
+
+
+<script>
+
+
+    form.onsubmit = async (event) => {
+        try{
+            event.preventDefault()
+            let videoForm = new FormData()
+            videoForm.append('video', file.files[0])
+            videoForm.append('videoName', names.value)
+
+            let response = await fetch('/add-video', {
+                method: 'POST',
+                body: videoForm
+            })
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+</script>
+</html>

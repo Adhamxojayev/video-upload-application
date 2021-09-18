@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/styles.css">
+    <title>register</title>
+</head>
+<body>
+    
+    <%- include('header.html', { links: ['login'] }) %>
+
+    <form id="form">
+        <p id="error"></p>
+        <input type="text" placeholder="username" required id="username">
+        <input type="password" placeholder="password" required id="password">
+        <input type="text" placeholder="fullname"  id="fullname">
+        <input type="email" placeholder="email"  id="email">
+        <button type="submit">register</button>
+    </form>
+
+<script>
+
+form.onsubmit = async (event) => {
+    try{
+        event.preventDefault()
+
+        let formData = new FormData()
+        formData.append('username', username.value)
+        formData.append('password', password.value)
+        formData.append('fullname', fullname.value)
+        formData.append('email', email.value)
+
+        let response = await fetch('/register', {
+            method: 'POST',
+            body: formData
+        })
+        let data = await response.json()
+        if(data.status == 201) {
+            error.textContent = data.message
+            setTimeout( () => {
+                window.location = '/'
+            },1500)
+        }    
+        error.textContent = data.message
+    
+    }catch(err){
+
+    }
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+[
+    {
+        "userId": 1,
+        "username": "ahror",
+        "fullname": "Adhamxojayev",
+        "email": "axroradhamxojayev@gmail.com",
+        "password": "afa1599cdea8f9c0ecd3d8de2268f707"
+    },
+    {
+        "userId": 5,
+        "username": "sarvar",
+        "fullname": "Sarvar",
+        "email": "tesla_19@mail.com",
+        "password": "bb3571b092c0861269582a726659bb1c"
+    },
+    {
+        "userId": 6,
+        "username": "umar",
+        "fullname": "Prescott",
+        "email": "vuqa@mailinator.com",
+        "password": "7b8bf0a0f016e81c5f37bcf95577d5bd"
+    },
+    {
+        "userId": 7,
+        "username": "bobir",
+        "fullname": "salimov",
+        "email": "axroradhamxojayev@gmail.com",
+        "password": "25f9e794323b453885f5181f1b624d0b"
+    },
+    {
+        "userId": 8,
+        "username": "abdulqodirtolipov1",
+        "fullname": "TolipovAbdulqodir",
+        "email": "tolipovabdulqodir@gmail.com",
+        "password": "25f9e794323b453885f5181f1b624d0b"
+    },
+    {
+        "userId": 9,
+        "username": "donishmand",
+        "fullname": "Muhammadhusayn",
+        "email": "olimjonovm007@gmail.com",
+        "password": "78c026ef3f7f5b90ed35a199f75fe193"
+    },
+    {
+        "userId": 11,
+        "username": "fayzullayevgn",
+        "fullname": "fayzullayev",
+        "email": "fayz@gmail.com",
+        "password": "ff8ba2edf68777401cc5e5134e261413"
+    },
+    {
+        "userId": 12,
+        "username": "allamshaxa",
+        "fullname": "SHAXBOZTESHAYEV",
+        "email": "teshayevshaxboz2@gmail.com",
+        "password": "a1d18afc690074ab5fe7679dd1b19bcc"
+    },
+    {
+        "userId": 13,
+        "username": "blackdragon",
+        "fullname": "Abdulaziz",
+        "email": "abdulaziz.abduazimov.2005@gmail.com",
+        "password": "dcaba127e64fd100883588959296f3bd"
+    }
+]

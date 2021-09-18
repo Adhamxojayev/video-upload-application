@@ -1,0 +1,99 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+*,
+*::before, 
+*::after{
+    box-sizing: inherit;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 170px;
+}
+input{
+    padding: 7px;
+    width: 100%;
+    margin-top: 10px;
+    outline: none;
+}
+
+label{
+    width: 100%;
+    color: green;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight:600;
+}
+
+.inpfile{
+    display: none;
+    color: black;
+    font-family: sans-serif;
+}
+
+.inpfile-span{
+    padding: 3px 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.767);
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+.inpfile-span img{
+    margin-right: 20px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: white !important;
+    margin: 0;
+}
+
+.inpfile-span span{
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+button{
+    width: 200px;
+    margin-top: 20px;
+    padding: 7px;
+    border: none;
+    background-color: green;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+button:hover{
+    background-color: rgb(29, 190, 29);
+}
+
+.files{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}

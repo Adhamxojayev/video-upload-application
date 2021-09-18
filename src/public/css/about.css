@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: gray;
+}
+p{
+    font-family: sans-serif;
+    line-height: 30px;
+    margin-left: 30px;
+    margin-right: 40px;
+}
+h1{
+    color: crimson;
+    margin-left: 30px;
+    margin-right: 40px;
+}
